@@ -7,3 +7,4 @@ alias gpush='git push'
 alias gd='git diff'
 alias gb='git branch -a'
 alias gdel='git branch -d'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
