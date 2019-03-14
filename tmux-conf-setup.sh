@@ -1,7 +1,3 @@
-# Locally stash anything being currently worked on
-git add .
-git stash
-
 HOME_DIR="$HOME"
 TMUX_CONFIG_FILE_NAME=".tmux.conf"
 FINAL_TMUX_CONFIG_FILE_PATH="$HOME_DIR/$TMUX_CONFIG_FILE_NAME"
@@ -25,6 +21,3 @@ mkdir "$TMUX_ADDONS_DIR/themes"
 cp $TOMORROW_NIGHT_THEMES_PATH "$TMUX_ADDONS_DIR/$TOMORROW_NIGHT_THEMES_PATH"
 echo -e '\n# Setting up the dark themes for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
 echo "source-file $TMUX_ADDONS_DIR/$TOMORROW_NIGHT_THEMES_PATH" >> $FINAL_TMUX_CONFIG_FILE_PATH
-
-# Pop anything locally stashed to return back to original state
-git stash pop
