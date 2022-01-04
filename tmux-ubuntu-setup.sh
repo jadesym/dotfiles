@@ -1,2 +1,2 @@
 sudo apt-get install tmux
-./setup-tmux-conf.sh
+./tmux-conf-setup.sh
