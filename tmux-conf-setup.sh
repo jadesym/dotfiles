@@ -14,6 +14,7 @@ mkdir $TMUX_ADDONS_DIR
 # Gitbar setup for tmux, requires wiping existing gitbar directory
 git clone https://github.com/arl/tmux-gitbar.git "$TMUX_ADDONS_DIR/.tmux-gitbar"
 echo -e '\n# Setting up the gitbar functionality for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
+echo -e 'TMUX_GITBAR_DIR="/path/to/tmux-gitbar"' >> $FINAL_TMUX_CONFIG_FILE_PATH
 echo "source-file $TMUX_ADDONS_DIR/.tmux-gitbar/tmux-gitbar.tmux" >> $FINAL_TMUX_CONFIG_FILE_PATH
 
 # Copying over the dark themes we want
