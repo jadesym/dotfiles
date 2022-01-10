@@ -7,3 +7,6 @@ set smartindent
 
 " Set line numbers
 set number
+
+" Add syntax colors
+:syntax on
