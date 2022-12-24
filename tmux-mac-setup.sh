@@ -7,4 +7,4 @@ source ~/.bash_aliases
 ./vim-setup.sh
 
 brew install tmux
-./setup-tmux-conf.sh
+./tmux-conf-setup.sh
