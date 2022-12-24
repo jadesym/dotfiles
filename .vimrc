@@ -9,5 +9,5 @@ set smartindent
 set number
 
 " Add syntax colors
-:syntax on
-:set background=dark
+syntax on
+set background=dark
