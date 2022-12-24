@@ -8,3 +8,5 @@ source ~/.bash_aliases
 
 brew install tmux
 ./tmux-conf-setup.sh
+
+./zsh-mac-setup.sh
