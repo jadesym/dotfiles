@@ -10,6 +10,6 @@ source ~/.bash_aliases
 ./vim-setup.sh
 
 brew install tmux
-./tmux-conf-setup.sh
+OS="MacOS" ./tmux-conf-setup.sh
 
 ./zsh-mac-setup.sh

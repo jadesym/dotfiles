@@ -6,4 +6,4 @@
 ./vim-setup.sh
 
 sudo apt-get install tmux
-./tmux-conf-setup.sh
+OS="Ubuntu" ./tmux-conf-setup.sh
