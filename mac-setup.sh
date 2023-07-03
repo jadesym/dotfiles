@@ -1,3 +1,6 @@
+# Git setup
+./git/setup.sh
+
 ./bash_aliases_setup.sh
 
 # Expand bash_aliases to non-interactive shells
