@@ -11,3 +11,6 @@ set number
 " Add syntax colors
 syntax on
 set background=dark
+
+" Set regex engine for speed
+set re=0
