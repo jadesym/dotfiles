@@ -19,3 +19,8 @@ echo ".gitconfig file has been created with the following contents:"
 
 # Display the content
 cat ~/.gitconfig
+
+# Set up git configurations
+git config --global pull.rebase true
+# Set the upstream branch for all local branches that have a matching remote branch
+git config --global push.default current
