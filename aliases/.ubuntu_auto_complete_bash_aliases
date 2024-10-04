@@ -1,0 +1,12 @@
+# This file should be kept in sync with .bash_aliases
+complete -F _complete_alias gst
+complete -F _complete_alias gc
+complete -F _complete_alias gco
+complete -F _complete_alias gpull
+complete -F _complete_alias gpom
+complete -F _complete_alias gpush
+complete -F _complete_alias gd
+complete -F _complete_alias gb
+complete -F _complete_alias gdel
+complete -F _complete_alias gl
+complete -F _complete_alias glcm

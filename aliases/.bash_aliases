@@ -1,3 +1,4 @@
+# This file should be kept in sync with .ubuntu_auto_complete_bash_aliases
 alias gst='git status'
 alias gc='git commit'
 alias gco='git checkout'
