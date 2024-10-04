@@ -1,5 +1,13 @@
 os_name=$(uname -s)
 
+# # For Ubuntu, ensure that this exists in your ~/.bashrc
+# # AFTER executing the bash_aliases bash script
+#
+# if [ -f ~/.ubuntu_bash_aliases_auto_complete ]; then
+#     . ~/.bash_completion.d/complete_alias
+#     . ~/.ubuntu_bash_aliases_auto_complete
+# fi
+
 if [ "$os_name" == "Darwin" ]; then
     # Do nothing since we already have auto completion in MacOS
 else [ "$os_name" == "Linux "]; then
@@ -22,7 +30,7 @@ source ~/.bash_aliases
 
 if [ "$os_name" == "Linux" ]; then
     rm ~/.ubuntu_auto_complete_bash_aliases
-    cp ./aliases/.ubuntu_auto_complete_bash_aliases ~/.ubuntu_auto_complete_bash_aliases
+    cp ./aliases/.ubuntu_bash_aliases_auto_complete ~/.ubuntu_bash_aliases_auto_complete
 
-    source ~/.ubuntu_auto_complete_bash_aliases
+    source ~/.ubuntu_bash_aliases_auto_complete
 fi
