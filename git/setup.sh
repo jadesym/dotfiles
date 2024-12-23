@@ -24,3 +24,5 @@ cat ~/.gitconfig
 git config --global pull.rebase true
 # Set the upstream branch for all local branches that have a matching remote branch
 git config --global push.default current
+# Set the default editor to vim
+git config --global core.editor "vim"
