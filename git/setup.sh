@@ -26,3 +26,5 @@ git config --global pull.rebase true
 git config --global push.default current
 # Set the default editor to vim
 git config --global core.editor "vim"
+# Automatically setup remote tracking
+git config --global push.autoSetupRemote true
