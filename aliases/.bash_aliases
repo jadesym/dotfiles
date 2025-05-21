@@ -12,3 +12,5 @@ alias gdel='git branch -d'
 alias gl="git log --graph --date=format:'%Y-%m-%d' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%ad%Creset %C(magenta)<%an>%Creset' --abbrev-commit"
 # Get Git Last Commit Message
 alias glcm="git log -1 --pretty=%B | tr -d '\n'"
+# Rebase Current Branch onto Main
+alias grbm="current_branch=$(git branch --show-current) && git checkout main && git pull && git checkout $current_branch && git rebase main"
