@@ -13,3 +13,6 @@ brew install tmux
 OS="MacOS" ./tmux-conf-setup.sh
 
 ./zsh-mac-setup.sh
+
+# Default to always showing hidden files in finder
+defaults write com.apple.finder AppleShowAllFiles -boolean true;
