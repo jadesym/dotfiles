@@ -28,3 +28,37 @@ git config --global push.default current
 git config --global core.editor "vim"
 # Automatically setup remote tracking
 git config --global push.autoSetupRemote true
+
+# ============================================
+# Git Delta - Better diff viewer
+# ============================================
+
+# Install git-delta
+echo "Installing git-delta..."
+sudo apt update && sudo apt install -y git-delta
+
+# Download delta themes.gitconfig
+DELTA_THEMES_DIR="$HOME/.config/delta"
+mkdir -p "$DELTA_THEMES_DIR"
+echo "Downloading delta themes.gitconfig..."
+curl -sL https://raw.githubusercontent.com/dandavison/delta/main/themes.gitconfig -o "$DELTA_THEMES_DIR/themes.gitconfig"
+
+# Include the themes file in git config
+git config --global include.path "$DELTA_THEMES_DIR/themes.gitconfig"
+
+# Set up delta as the pager
+git config --global core.pager delta
+
+# Set up delta for interactive add
+git config --global interactive.diffFilter 'delta --color-only'
+
+# Enable navigation between diff sections with n/N
+git config --global delta.navigate true
+
+# Use weeping-willow theme
+git config --global delta.features weeping-willow
+
+# Use zdiff3 for better merge conflict display
+git config --global merge.conflictStyle zdiff3
+
+echo "Git delta has been configured successfully!"
