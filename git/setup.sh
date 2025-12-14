@@ -28,6 +28,8 @@ git config --global push.default current
 git config --global core.editor "vim"
 # Automatically setup remote tracking
 git config --global push.autoSetupRemote true
+# Rewrite HTTPS GitHub URLs to use SSH (for authentication)
+git config --global url."git@github.com:".insteadOf "https://github.com/"  # Allows git clone https://... to use SSH keys
 
 # ============================================
 # Git Delta - Better diff viewer
