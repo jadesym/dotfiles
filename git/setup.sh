@@ -35,9 +35,17 @@ git config --global url."git@github.com:".insteadOf "https://github.com/"  # All
 # Git Delta - Better diff viewer
 # ============================================
 
-# Install git-delta
+# Install git-delta based on OS
 echo "Installing git-delta..."
-sudo apt update && sudo apt install -y git-delta
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    brew install git-delta
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Ubuntu/Linux
+    sudo apt update && sudo apt install -y git-delta
+else
+    echo "Unsupported OS for git-delta installation. Please install manually."
+fi
 
 # Download delta themes.gitconfig
 DELTA_THEMES_DIR="$HOME/.config/delta"
@@ -57,8 +65,13 @@ git config --global interactive.diffFilter 'delta --color-only'
 # Enable navigation between diff sections with n/N
 git config --global delta.navigate true
 
-# Use weeping-willow theme
-git config --global delta.features weeping-willow
+# Enable side-by-side view
+git config --global delta.side-by-side true
+
+# Use weeping-willow theme (Ubuntu only)
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    git config --global delta.features weeping-willow
+fi
 
 # Use zdiff3 for better merge conflict display
 git config --global merge.conflictStyle zdiff3
