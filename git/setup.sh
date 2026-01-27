@@ -68,10 +68,8 @@ git config --global delta.navigate true
 # Enable side-by-side view
 git config --global delta.side-by-side true
 
-# Use weeping-willow theme (Ubuntu only)
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    git config --global delta.features weeping-willow
-fi
+# Use weeping-willow theme
+git config --global delta.features weeping-willow
 
 # Use zdiff3 for better merge conflict display
 git config --global merge.conflictStyle zdiff3
