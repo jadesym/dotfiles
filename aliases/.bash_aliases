@@ -8,6 +8,7 @@ alias gpush='git push'
 alias gd='git diff'
 # Sort the local branches first by commit date, then the remotes
 alias gb=" { git branch --color=always --sort='-committerdate'; git branch -r --color=always --sort='-committerdate'; } | less -R"
+alias gbl="git branch --color=always --sort='-committerdate'"
 alias gdel='git branch -d'
 alias gl="git log --graph --date=format:'%Y-%m-%d' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%ad%Creset %C(magenta)<%an>%Creset' --abbrev-commit"
 # Get Git Last Commit Message
