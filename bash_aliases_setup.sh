@@ -10,9 +10,10 @@ os_name=$(uname -s)
 
 if [ "$os_name" == "Darwin" ]; then
     # Do nothing since we already have auto completion in MacOS
-else [ "$os_name" == "Linux "]; then
+    :
+elif [ "$os_name" == "Linux" ]; then
     # Install complete-alias for bash autocomplete
-    mkdir ~/.bash_completion.d
+    mkdir -p ~/.bash_completion.d
     curl https://raw.githubusercontent.com/cykerway/complete-alias/master/complete_alias \
         > ~/.bash_completion.d/complete_alias
 
@@ -23,13 +24,17 @@ else
 fi
 
 # Remove and replace existing .bash_aliases
-rm ~/.bash_aliases
+rm -f ~/.bash_aliases
 cp ./aliases/.bash_aliases ~/.bash_aliases
 
 source ~/.bash_aliases
 
 if [ "$os_name" == "Linux" ]; then
-    rm ~/.ubuntu_auto_complete_bash_aliases
+    if ! grep -qxF "export LESS='-N'" ~/.bashrc 2>/dev/null; then
+        echo "export LESS='-N'" >> ~/.bashrc
+    fi
+
+    rm -f ~/.ubuntu_auto_complete_bash_aliases
     cp ./aliases/.ubuntu_bash_aliases_auto_complete ~/.ubuntu_bash_aliases_auto_complete
 
     source ~/.ubuntu_bash_aliases_auto_complete
