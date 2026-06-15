@@ -1,0 +1,6 @@
+{
+  "useTmuxHooks": true,
+  "defaultAgent": "codex",
+  "baseBranch": "main",
+  "branchPrefix": "kf/"
+}
