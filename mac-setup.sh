@@ -19,3 +19,9 @@ OS="MacOS" ./tmux-conf-setup.sh
 
 # Default to always showing hidden files in finder; kill all Finder processes to ensure any opened Finder will pick up defaults
 defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder;
+
+# Install vscode command line
+cat << EOF >> ~/.zprofile
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
