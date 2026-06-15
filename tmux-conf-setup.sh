@@ -34,10 +34,10 @@ git clone https://github.com/arl/tmux-gitbar.git "$TMUX_ADDONS_DIR/.tmux-gitbar"
 
 # Check OS and use appropriate echo command
 if [[ $OS == "$OS_MACOS" ]]; then
-  echo '\n# Setting up the gitbar functionality for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
+  echo '# Setting up the gitbar functionality for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
   echo "TMUX_GITBAR_DIR=$TMUX_ADDONS_DIR/.tmux-gitbar" >> $FINAL_TMUX_CONFIG_FILE_PATH
 else
-  echo -e '\n# Setting up the gitbar functionality for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
+  echo -e '# Setting up the gitbar functionality for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
   echo -e "TMUX_GITBAR_DIR=$TMUX_ADDONS_DIR/.tmux-gitbar" >> $FINAL_TMUX_CONFIG_FILE_PATH
 fi
 
@@ -49,9 +49,9 @@ cp $TOMORROW_NIGHT_THEMES_PATH "$TMUX_ADDONS_DIR/$TOMORROW_NIGHT_THEMES_PATH"
 
 # Check OS and use appropriate echo command
 if [[ $OS == "$OS_MACOS" ]]; then
-  echo '\n# Setting up the dark themes for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
+  echo '# Setting up the dark themes for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
   echo "source-file $TMUX_ADDONS_DIR/$TOMORROW_NIGHT_THEMES_PATH" >> $FINAL_TMUX_CONFIG_FILE_PATH
 else
-  echo -e '\n# Setting up the dark themes for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
+  echo -e '# Setting up the dark themes for tmux' >> $FINAL_TMUX_CONFIG_FILE_PATH
   echo -e "source-file $TMUX_ADDONS_DIR/$TOMORROW_NIGHT_THEMES_PATH" >> $FINAL_TMUX_CONFIG_FILE_PATH
 fi
