@@ -6,6 +6,7 @@ alias gpull='git pull'
 alias gpom="git pull origin master"
 alias gpush='git push'
 alias gd='git diff'
+alias hd='hunk diff'
 # Sort the local branches first by commit date, then the remotes
 alias gb=" { git branch --color=always --sort='-committerdate'; git branch -r --color=always --sort='-committerdate'; } | less -R"
 alias gbl="git branch --color=always --sort='-committerdate'"
