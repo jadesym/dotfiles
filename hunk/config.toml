@@ -1,0 +1,6 @@
+wrap_lines = true
+theme = "custom"
+
+[custom_theme]
+movedAddedBg = "#164e63"
+movedRemovedBg = "#4a1d4f"

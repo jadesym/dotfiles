@@ -62,6 +62,9 @@ git config --global core.pager delta
 # Set up delta for interactive add
 git config --global interactive.diffFilter 'delta --color-only'
 
+# Highlight moved code blocks in diffs
+git config --global diff.colorMoved default
+
 # Enable navigation between diff sections with n/N
 git config --global delta.navigate true
 
