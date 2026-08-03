@@ -47,6 +47,22 @@ else
     echo "Unsupported OS for git-delta installation. Please install manually."
 fi
 
+# Install GitHub CLI and gh-stack extension based on OS
+echo "Installing GitHub CLI..."
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    brew install gh
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Ubuntu/Linux
+    sudo apt update && sudo apt install -y gh
+else
+    echo "Unsupported OS for GitHub CLI installation. Please install manually."
+fi
+
+if command -v gh >/dev/null 2>&1; then
+    gh extension install github/gh-stack
+fi
+
 # Download delta themes.gitconfig
 DELTA_THEMES_DIR="$HOME/.config/delta"
 mkdir -p "$DELTA_THEMES_DIR"
