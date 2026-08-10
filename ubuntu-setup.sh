@@ -1,6 +1,8 @@
 # Git setup
 ./git/setup.sh
 
+./yazi/setup.sh
+
 ./bash_aliases_setup.sh
 
 ./vim-setup.sh
