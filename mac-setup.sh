@@ -18,6 +18,10 @@ OS="MacOS" ./tmux-conf-setup.sh
 
 ./zsh-mac-setup.sh
 
+# Configure Ghostty
+mkdir -p "$HOME/Library/Application Support/com.mitchellh.ghostty"
+cp ./config-mac.ghostty "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
+
 # Default to always showing hidden files in finder; kill all Finder processes to ensure any opened Finder will pick up defaults
 defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder;
 

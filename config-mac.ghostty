@@ -1,7 +1,3 @@
-# linux / ubuntu for wsl2
-keybind = ctrl+enter=text:\r
-
-# mac
 keybind = shift+enter=text:\n
 macos-option-as-alt = true
 keybind = alt+left=unbind
