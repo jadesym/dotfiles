@@ -1,5 +1,7 @@
 #!/bin/bash
 
+brew install git
+
 # Ask for email input
 echo "Please enter your name for git configuration:"
 read name
