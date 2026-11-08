@@ -1,0 +1,85 @@
+model_reasoning_effort = "high"
+
+service_tier = "fast"
+
+default_permissions = "workspace-safe"
+
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+
+[permissions.workspace-safe]
+extends = ":workspace"
+
+[permissions.workspace-safe.filesystem.":workspace_roots"]
+"**/.env*" = "deny"
+
+[projects."/Users/kevinfu/Documents/workspace/endorsed"]
+trust_level = "trusted"
+
+[projects."/Users/kevinfu/Documents/workspace/endorsed-terraform"]
+trust_level = "trusted"
+
+[projects."/Users/kevinfu/Documents/workspace/dotfiles"]
+trust_level = "trusted"
+
+[tui]
+whimsy = false
+
+[mcp_servers.supabase_prod]
+command = "npx"
+args = ["-y", "@supabase/mcp-server-supabase@latest", "--project-ref=drpqnchqghvyvhxaowig", "--read-only"]
+
+[mcp_servers.supabase_prod.tools.execute_sql]
+approval_mode = "approve"
+
+[mcp_servers.supabase_stg]
+command = "npx"
+args = ["-y", "@supabase/mcp-server-supabase@latest", "--project-ref=gtjdvxqasoffjnisbdls", "--read-only"]
+
+[mcp_servers.supabase_stg.tools.execute_sql]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["chrome-devtools-mcp@latest", "--ignore-default-chrome-arg=--disable-extensions"]
+[mcp_servers.chrome-devtools.tools.click]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.emulate]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.evaluate_script]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.fill]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.fill_form]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.get_network_request]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.navigate_page]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.new_page]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.resize_page]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.take_screenshot]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.take_snapshot]
+approval_mode = "approve"
+
+[mcp_servers.posthog]
+url = "https://mcp.posthog.com/mcp"
+
+[features]
+multi_agent = true
+hooks = true
+default_mode_request_user_input = true
+js_repl = false

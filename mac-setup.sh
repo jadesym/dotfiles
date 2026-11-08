@@ -29,6 +29,8 @@ EOF
 
 # Install AI coding tools
 curl -fsSL https://chatgpt.com/codex/install.sh | sh
+mkdir -p "$HOME/.codex"
+cp ./codex/config.toml "$HOME/.codex/config.toml"
 curl -fsSL https://claude.ai/install.sh | bash
 
 # Install Herdr and copy the repo config to ~/.config/herdr/config.toml
