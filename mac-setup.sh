@@ -17,6 +17,7 @@ brew install tmux
 OS="MacOS" ./tmux-conf-setup.sh
 
 ./zsh-mac-setup.sh
+./fzf/setup.sh
 
 # Configure Ghostty
 mkdir -p "$HOME/Library/Application Support/com.mitchellh.ghostty"
