@@ -1,0 +1,4 @@
+[opener]
+edit = [
+  { run = 'LESSSECURE=1 bat --paging=always %s', block = true, desc = "Read with bat/less" }
+]
